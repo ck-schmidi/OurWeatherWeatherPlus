@@ -81,9 +81,11 @@ void configModeCallback ()
 
 #define DEBUG_MODE 1
 
-#include "aREST.h"
+#include <aREST.h>
 
-#include <String.h>
+
+
+#include "string.h"
 
 // display modes
 #define DISPLAY_POWERUP 0
@@ -177,7 +179,7 @@ int WeatherDisplayMode;
 
 // DS3231 Library functions
 
-#include "RtcDS3231.h"
+#include <RtcDS3231.h>
 
 RtcDS3231 Rtc;
 
@@ -406,7 +408,7 @@ float SolarPanelCurrent;
 // WXLink Support
 
 
-#include "Crc16.h"
+#include "crc16.h"
 
 //Crc 16 library (XModem)
 Crc16 crc;
@@ -1615,7 +1617,7 @@ void loop() {
         Serial.println("WeatherUnderground Data New - sent");
       else
         Serial.println("WeatherUnderground Data Stale - Not sent");
-        
+
       if (dataStale == false)
       {
         if (sendWeatherUndergroundData() == 0)

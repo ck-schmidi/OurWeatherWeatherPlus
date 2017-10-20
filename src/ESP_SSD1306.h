@@ -1,21 +1,21 @@
 /*********************************************************************
  *
  **  Modified Adafruit Library to work with OLED SSD1306_128_64 with SPI communication only **
- *  By: Jordi Segura 
+ *  By: Jordi Segura
  *
 This is a library for Monochrome OLEDs based on SSD1306 drivers
 
   Pick one up today in the adafruit shop!
   ------> http://www.adafruit.com/category/63_98
 
-These displays use SPI to communicate, 4 or 5 pins are required to  
+These displays use SPI to communicate, 4 or 5 pins are required to
 interface
 
-Adafruit invests time and resources providing this open source code, 
-please support Adafruit and open-source hardware by purchasing 
+Adafruit invests time and resources providing this open source code,
+please support Adafruit and open-source hardware by purchasing
 products from Adafruit!
 
-Written by Limor Fried/Ladyada  for Adafruit Industries.  
+Written by Limor Fried/Ladyada  for Adafruit Industries.
 BSD license, check license.txt for more information
 All text above, and the splash screen must be included in any redistribution
 *********************************************************************/
@@ -157,7 +157,7 @@ class ESP_SSD1306 : public Adafruit_GFX  {
   void clearDisplay(void);
   void invertDisplay(uint8_t i);
   void display();
- 
+
   void startscrollright(uint8_t start, uint8_t stop);
   void startscrollleft(uint8_t start, uint8_t stop);
 
@@ -184,16 +184,3 @@ class ESP_SSD1306 : public Adafruit_GFX  {
   inline void drawFastHLineInternal(int16_t x, int16_t y, int16_t w, uint16_t color) __attribute__((always_inline));
 
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
