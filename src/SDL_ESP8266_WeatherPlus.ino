@@ -149,7 +149,7 @@ aREST rest = aREST();
 
 
 
-#include "elapsedMillis.h"
+#include <elapsedMillis.h>
 
 elapsedMillis timeElapsed; //declare global if you don't want it reset every time loop
 
@@ -327,7 +327,7 @@ bool AirQualityPresent = false;
 
 #include <AirQualitySensor.h>
 
-#include "SDL_Weather_80422.h"
+#include <SDL_Weather_80422.h>
 
 
 //SDL_Weather_80422 weatherStation(pinAnem, pinRain, 0, 0, A0, SDL_MODE_INTERNAL_AD );
