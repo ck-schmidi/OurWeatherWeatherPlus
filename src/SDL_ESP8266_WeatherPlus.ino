@@ -40,7 +40,8 @@ extern "C" {
 #include <DNSServer.h>
 #include <ESP8266WebServer.h>
 
-
+// misc
+#include <crc16.h>
 
 #include "WiFiManager.h"          //https://github.com/tzapu/WiFiManager
 
@@ -158,11 +159,11 @@ elapsedMillis timeElapsed300Seconds; //declare global if you don't want it reset
 // Both are stored in BMP180 variables
 //
 
-#include "MAdafruit_BMP280.h"
-#include "MAdafruit_BMP085.h"
+#include <MAdafruit_BMP280.h>
+#include <MAdafruit_BMP085.h>
 Adafruit_BMP280 bme;
-
 Adafruit_BMP085 bmp;
+
 #define SENSORS_PRESSURE_SEALEVELHPA 1015.00
 float altitude_meters;
 float BMP180_Temperature;
@@ -190,7 +191,7 @@ float AM2315_Temperature;
 float AM2315_Humidity;
 float dewpoint;
 
-#include "SDL_ESP8266_HR_AM2315.h"
+#include <SDL_ESP8266_HR_AM2315.h>
 
 
 SDL_ESP8266_HR_AM2315 am2315;
@@ -324,7 +325,7 @@ long currentAirQualitySensor;
 int INTcurrentAirQualitySensor;
 bool AirQualityPresent = false;
 
-#include "AirQualitySensor.h"
+#include <AirQualitySensor.h>
 
 #include "SDL_Weather_80422.h"
 
@@ -408,8 +409,6 @@ float SolarPanelCurrent;
 // WXLink Support
 
 
-#include "crc16.h"
-
 //Crc 16 library (XModem)
 Crc16 crc;
 
@@ -442,9 +441,8 @@ SDL_Arduino_INA3221 SunAirPlus;
 #define OUTPUT_CHANNEL 3
 
 // OLED Display
-
-#include "OWMAdafruit_GFX.h"
-#include "ESP_SSD1306.h"
+#include <OWMAdafruit_GFX.h>
+#include <ESP_SSD1306.h>
 
 
 #define min(a,b) ((a)<(b)?(a):(b))

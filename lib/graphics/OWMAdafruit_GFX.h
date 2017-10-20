@@ -8,7 +8,7 @@
  #include "WProgram.h"
 #endif
 
-#include "gfxfont.h"
+#include <gfxfont.h>
 
 #define adagfxswap(a, b) { int16_t t = a; a = b; b = t; }
 
